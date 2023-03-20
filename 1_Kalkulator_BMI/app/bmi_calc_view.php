@@ -8,16 +8,16 @@
 
 <form action="<?php print(_APP_URL);?>/app/bmi_calc.php" method="post">
     
-  <label for="id_x">Podaj wzrost (m): </label>
+        <label for="id_x">Podaj wzrost (m): </label>
 	<input id="id_x" type="text" name="x" value="<?php if (isset($x)) print($x); ?>" /><br />
         
-  <label for="id_y">Podaj wagę: </label>
+        <label for="id_y">Podaj wagę: </label>
 	<input id="id_y" type="text" name="y" value="<?php if (isset($y)) print($y); ?>" /><br />
         
 	<label for="id_op">Płeć: </label>
 	<select name="op">
-		<option value="man">Kobieta</option>
-		<option value="woman">Mężczyzna</option>
+		<option value="man">Mężczyzna</option>
+		<option value="woman">Kobieta</option>
 	</select><br />
 	<input type="submit" value="Wylicz" />
 </form>	
