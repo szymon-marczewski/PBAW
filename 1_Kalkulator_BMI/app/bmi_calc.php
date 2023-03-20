@@ -33,12 +33,21 @@ if (empty( $messages )) {
 if (empty ( $messages )) {
     
     $bmi = $y / ($x *$x);
+        switch ($operation){
+            case 'man':
+                if($bmi < 18.5) {$result = "Pańskie BMI: ".round($bmi,2)." - niedowaga";}
+                if($bmi >= 18.5 && $bmi < 25) {$result = "Pańskie BMI: ".round($bmi,2)." - waga prawidłowa";}
+                if($bmi >= 25 && $bmi < 30) {$result = "Pańskie BMI: ".round($bmi,2)." - nadwaga";}
+                if($bmi >= 30) {$result = "Pańskie BMI: ".round($bmi,2)." - otyłość";}
+                break;
             
-        if($bmi < 18.5) {$result = "BMI: ".round($bmi,2)." - niedowaga";}
-        if($bmi >= 18.5 && $bmi < 25) {$result = "BMI: ".round($bmi,2)." - waga prawidłowa";}
-        if($bmi >= 25 && $bmi < 30) {$result = "BMI: ".round($bmi,2)." - nadwaga";}
-        if($bmi >= 30) {$result = "BMI: ".round($bmi,2)." - otyłość";}
-        
+            case 'woman':
+                if($bmi < 18.5) {$result = "Pani BMI: ".round($bmi,2)." - niedowaga";}
+                if($bmi >= 18.5 && $bmi < 25) {$result = "Pani BMI: ".round($bmi,2)." - waga prawidłowa";}
+                if($bmi >= 25 && $bmi < 30) {$result = "Pani BMI: ".round($bmi,2)." - nadwaga";}
+                if($bmi >= 30) {$result = "Pani BMI: ".round($bmi,2)." - otyłość";}
+                break;
+        }
 }
 
 include 'bmi_calc_view.php';
