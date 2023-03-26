@@ -11,12 +11,12 @@ include _ROOT_PATH.'/app/security/check.php';
 </head>
 <body>
 
-<div style="width:90%; margin: 2em auto;">
+<div style="width:90%; margin: 2em auto; ">
     <a href="<?php print(_APP_ROOT); ?>/app/credit_calc.php" class="pure-button"><b>POWRÓT</b></a>
     <a href="<?php print(_APP_ROOT); ?>/app/security/logout.php" class="pure-button pure-button-active"><b>WYLOGUJ</b></a>
 </div>
 
-<div style="width:90%; margin: 2em auto;">
+<div style="width:90%; margin: 2em auto; background-color: #ffa500; text-align: center">
     <p><i>Chroniona strona z dostępem tylko dla upoważnionych</i></p>
 </div>	
 
