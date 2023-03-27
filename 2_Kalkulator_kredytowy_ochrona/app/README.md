@@ -1,1 +1,1 @@
-Tylko administrator może obliczać kredyt o wartości >= 100 000 
+Tylko administrator może obliczać kredyt o wartości >= 100 000 zł
