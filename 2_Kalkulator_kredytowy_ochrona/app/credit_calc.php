@@ -57,19 +57,55 @@ function count_credit(&$x,&$y,&$procent,&$messages,&$result){
             case 'low':
                 $procent = 0.15;
                 $monthly = ($x + ($x * $procent)) / $months;
+                if($x >= 100000){
+                    if($role == 'admin'){
+                        $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                        break;
+                    }
+                    else{
+                        $messages [] = 'Tylko administrator może wyliczać tak duże kredyty!';
+                        break;
+                    }
+                }
+                else{
                 $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                }
                 break;
                 
             case 'medium':
                 $procent = 0.18;
                 $monthly = ($x + ($x * $procent)) / $months;
+                if($x >= 100000){
+                    if($role == 'admin'){
+                        $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                        break;
+                    }
+                    else{
+                        $messages [] = 'Tylko administrator może wyliczać tak duże kredyty!';
+                        break;
+                    }
+                }
+                else{
                 $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                }
                 break;
 
             case 'high':
                 $procent = 0.21;
                 $monthly = ($x + ($x * $procent)) / $months;
+                if($x >= 100000){
+                    if($role == 'admin'){
+                        $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                        break;
+                    }
+                    else{
+                        $messages [] = 'Tylko administrator może wyliczać tak duże kredyty!';
+                        break;
+                    }
+                }
+                else{
                 $result = "Miesięczna rata: ".round($monthly,2)."zł";
+                }
                 break;
                 
        }
